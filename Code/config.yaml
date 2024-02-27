@@ -1,0 +1,21 @@
+# tokenizerHF : Jayveersinh-Raj/Gujarati_hatespeech_extension            ## for xlmRoBERTa-Gujarati
+# tokenizerHF : Hate-speech-CNERG/deoffxlmr-mono-kannada                 ## for xlmRoBERTa-Kannada
+# tokenizerHF : GujjetiNagaraju/xlm-roberta-base-finetuned-Telugu_NLP    ## for xlmRoBERTa-Telugu
+# tokenizerHF : l3cube-pune/gujarati-bert-scratch                        ## for BERT-Gujarati
+# tokenizerHF : l3cube-pune/kannada-bert                                 ## for BERT-Kannada
+tokenizerHF : l3cube-pune/telugu-bert                                  ## for BERT-Telugu
+# tokenizerHF : IIIT-L/indic-bert-finetuned-code-mixed-DS                ## for multilingual IndicBERT
+
+# training settings, loss, weights path
+num_epochs : 50
+batch_size : 128
+learning_rate : 0.001
+optimizer : Adam
+criterion : Cross-Entropy-Loss
+model_file : ../Weights/Bert_Tel
+
+## file names to add after weights above, are the files where weights are saved
+## Bert       -- Bert_Guj         Bert_Kan             Bert_Tel
+## Indic      -- IndicGujarati    IndicKannad          IndicTelugu
+## xlmRoBERTa -- XLMRoberta_Guj   XLMRoberta_Kannad    XLMRoberta_Tel
+device : cuda
